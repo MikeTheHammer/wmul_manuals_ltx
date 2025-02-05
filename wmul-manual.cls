@@ -141,7 +141,24 @@
 \DeclareRobustCommand*{\dedication}[1]{\gdef\@dedication{#1}}
 \DeclareRobustCommand*{\frontquote}[1]{\gdef\@frontquote{#1}}
 \DeclareRobustCommand*{\frontquoteattrib}[1]{\gdef\@frontquoteattrib{#1}}
-
+\DeclareRobustCommand*{\compilationversion}[1]{%
+    \gdef\compilationversion{#1}%
+    \ifstrequal{#1}{public}{%
+		\license{by-sa}%
+        \imagecolor{Color/}%
+    }{%
+        \ifstrequal{#1}{private_pdf}{%
+			\license{by-nc-nd}%
+            \imagecolor{Color/}%
+        }{%
+			\license{by-nc-nd}%
+            \imagecolor{Grayscale/}%
+        }%
+    }%
+}
+\DeclareRobustCommand*{\imagecolor}[1]{\gdef\imagecolor{#1}}
+\DeclareRobustCommand*{\license}[1]{\gdef\@license{#1}}
+\DeclareRobustCommand*{\imageroot}[1]{\gdef\imageroot{#1}}
 \DeclareRobustCommand*{\subtitle}[1]{\gdef\@subtitle{#1}}
 \subtitle{Volume \@volumenumber\space of \@seriestitle}
 
