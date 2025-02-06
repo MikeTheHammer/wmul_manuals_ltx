@@ -34,13 +34,17 @@
 	\newgeometry{
 		inner=0.75in,
 		textwidth=6.00in,
+		top=1.1in,
+		bottom=1.1in,
 		headheight=15pt,
 		heightrounded
 	}
 	\fancyhead{}
 	\fancyfoot{}
-	\fancyhead[LE, RO]{\rightmark}
+	\fancyhead[RO]{\nouppercase\rightmark}
+	\fancyhead[LE]{\nouppercase\leftmark}
 	\fancyfoot[LE, RO]{Volume \@volumenumber\space - Page \thepage}
+	\fancyfootoffset[LE, RO]{1.2in}
 	\renewcommand{\headrulewidth}{0pt}
 }
 
@@ -48,14 +52,17 @@
 	\newgeometry{
 		inner=0.75in,
 		textwidth=6.00in,
+		top=1.1in,
+		bottom=1.1in,
 		headheight=15pt,
 		heightrounded
 	}
 	\fancyhead{}
 	\fancyfoot{}
-	\fancyhead[LE, RO]{\rightmark}
+	\fancyhead[RO]{\nouppercase\rightmark}
+	\fancyhead[LE]{\nouppercase\leftmark}
 	\fancyfoot[LE, RO]{Volume \@volumenumber\space - Page \thepage}
-	\fancyfootoffset[LE, RO]{1in}
+	\fancyfootoffset[LE, RO]{1.2in}
 	\renewcommand{\headrulewidth}{1pt}
 	\raggedright
 	\setlength{\parindent}{3em}
@@ -89,13 +96,15 @@
 	\newgeometry{
 		inner=0.75in,
 		textwidth=6.00in,
+		top=1.1in,
+		bottom=1.1in,
 		headheight=15pt,
 		heightrounded
 	}
 	\fancyhead{}
 	\fancyfoot{}
 	\fancyfoot[LE, RO]{Volume \@volumenumber\space - Page \thepage}
-	\fancyfootoffset[LE, RO]{1in}
+	\fancyfootoffset[LE, RO]{1.2in}
 }
 
 \fancypagestyle{fullpageimage}{%
@@ -107,6 +116,10 @@
 	}
 	\fancyhf{}%
 	\renewcommand{\headrulewidth}{0pt}
+}
+
+\fancypagestyle{landscape}{
+	\setlength{\parindent}{0em}
 }
 
 
