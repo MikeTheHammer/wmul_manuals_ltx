@@ -146,19 +146,23 @@
     \ifstrequal{#1}{public}{%
 		\license{by-sa}%
         \imagecolor{Color/}%
+		\boolfalse{PrintNoDerivatives}
     }{%
         \ifstrequal{#1}{private_pdf}{%
 			\license{by-nc-nd}%
             \imagecolor{Color/}%
+			\booltrue{PrintNoDerivatives}
         }{%
 			\license{by-nc-nd}%
             \imagecolor{Grayscale/}%
+			\booltrue{PrintNoDerivatives}
         }%
     }%
 }
 \DeclareRobustCommand*{\imagecolor}[1]{\gdef\imagecolor{#1}}
 \DeclareRobustCommand*{\license}[1]{\gdef\@license{#1}}
 \DeclareRobustCommand*{\imageroot}[1]{\gdef\imageroot{#1}}
+\newbool{PrintNoDerivatives}
 \DeclareRobustCommand*{\subtitle}[1]{\gdef\@subtitle{#1}}
 \subtitle{Volume \@volumenumber\space of \@seriestitle}
 
