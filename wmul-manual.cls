@@ -199,10 +199,10 @@
 \endgroup
 }
 
-\renewcommand\maketitle{
+\renewcommand{\maketitle}{
 \begingroup
 	\centering
-	{\fontsize{36}{43.2}\mdseries\@title\newline\smallskip}
+	{\fontsize{36}{43.2}\mdseries\@title\par}
 	{\huge\@subtitle\par}
 	\vfill
 	{\large by: \@author\par\vspace{14pt}}
