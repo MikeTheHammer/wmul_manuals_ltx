@@ -160,15 +160,18 @@
 		\license{by-sa}%
         \imagecolor{Color/}%
 		\boolfalse{PrintNoDerivatives}
+		\booltrue{PrintColor}
     }{%
         \ifstrequal{#1}{private_pdf}{%
 			\license{by-nc-nd}%
             \imagecolor{Color/}%
 			\booltrue{PrintNoDerivatives}
+			\booltrue{PrintColor}
         }{%
 			\license{by-nc-nd}%
             \imagecolor{Grayscale/}%
 			\booltrue{PrintNoDerivatives}
+			\boolfalse{PrintColor}
         }%
     }%
 }
@@ -176,6 +179,7 @@
 \DeclareRobustCommand*{\license}[1]{\gdef\@license{#1}}
 \DeclareRobustCommand*{\imageroot}[1]{\gdef\imageroot{#1}}
 \newbool{PrintNoDerivatives}
+\newbool{PrintColor}
 \DeclareRobustCommand*{\subtitle}[1]{\gdef\@subtitle{#1}}
 \subtitle{Volume \@volumenumber\space of \@seriestitle}
 
@@ -308,21 +312,6 @@
 	\href{#1}{\ul{#1}}
 }
 
-% Make a colored box for notes. 
-\newtcolorbox{notebox}[2][]{
-	center,
-	colback=red!5!white,
-	colframe=red!75!black,
-	fonttitle=\large\bfseries,
-	colbacktitle=red!85!black,
-	enhanced,
-	top=4mm,
-	attach boxed title to top center={yshift=-3mm},
-	halign=flush center,
-	add to width=-5em,
-	title={#2},
-	#1
-}
 
 \AtEndPreamble{%
 % set some hyperref options if it's loaded
@@ -333,4 +322,39 @@
 %}{}%
 % let minted's listing captions use the correct font
 \@ifpackageloaded{minted}{\let\@float@c@listing\@caption}{}
+
+% Make a colored box for notes. 
+\ifbool{PrintColor}{
+	\newtcolorbox{notebox}[2][]{
+		center,
+		colback=red!5!white,
+		colframe=red!75!black,
+		fonttitle=\large\bfseries,
+		colbacktitle=red!85!black,
+		enhanced,
+		top=4mm,
+		attach boxed title to top center={yshift=-3mm},
+		halign=flush center,
+		add to width=-5em,
+		title={#2},
+		#1
+	}
+}{
+	\newtcolorbox{notebox}[2][]{
+		center,
+		colback=black!5!white,
+		colframe=black,
+		fonttitle=\large\bfseries,
+		colbacktitle=black,
+		enhanced,
+		top=4mm,
+		attach boxed title to top center={yshift=-3mm},
+		halign=flush center,
+		add to width=-5em,
+		title={#2},
+		#1
+	}
+}
+
+
 }
