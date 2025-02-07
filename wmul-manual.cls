@@ -116,6 +116,7 @@
 	}
 	\fancyhf{}%
 	\renewcommand{\headrulewidth}{0pt}
+	\setlength{\parindent}{0em}
 }
 
 \fancypagestyle{landscape}{
