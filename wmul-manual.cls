@@ -204,6 +204,7 @@
 \titleformat{\section}[block]{\raggedright\fontsize{24}{28.8}\mdseries}{\thesection.}{0.3em}{}[\vspace{-1.25em}\rule{\titlewidth}{1pt}]
 \titlespacing{\section}{0pt}{2pt plus 1pt minus .2pt}{2pt plus .2pt}
 \titleformat{\subsection}[block]{\raggedright\Large\bfseries}{\thesubsection.}{0.3em}{}
+\titlespacing{\subsection}{0pt}{2pt plus 1pt minus .2pt}{6pt plus .2pt}
 
 
 % Always start a new section at the top of a new page, unless explicitly told 
