@@ -195,10 +195,14 @@
 \gdef\@frontquoteattrib{\@latex@warning{No frontquoteattrib specified for dedication page. Ignoring.}}
 
 % Format the chapter and section titles
+\setsecnumdepth{subsection}
 \titleformat{\chapter}[block]{\centering\fontsize{26}{31.2}\bfseries}{\thechapter.}{0.3em}{}
 \titlespacing{\chapter}{0pt}{-3em}{6pt plus .2pt}
+\renewcommand{\thesection}{\thechapter.\Alph{section}}
 \titleformat{\section}[block]{\raggedright\fontsize{24}{28.8}\mdseries}{\thesection.}{0.3em}{}[\vspace{-1.25em}\rule{\titlewidth}{1pt}]
 \titlespacing{\section}{0pt}{2pt plus 1pt minus .2pt}{2pt plus .2pt}
+\titleformat{\subsection}[block]{\raggedright\Large\bfseries}{\thesubsection.}{0.3em}{}
+
 
 % Always start a new section at the top of a new page, unless explicitly told 
 % not to with the \nbpsection command (no-page-break section).
