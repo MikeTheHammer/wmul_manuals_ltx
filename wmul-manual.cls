@@ -143,6 +143,8 @@
 \RequirePackage[most]{tcolorbox} % For the note boxes
 \RequirePackage[calcwidth]{titlesec} % For configuring the chapter, section, 
 % etc titles
+\RequirePackage{enumitem} % Format the lists
+\setlist[1]{itemsep=-12pt, leftmargin=4em, itemindent=-1em, parsep=16pt}
 
 % Commands for configuring the values of the front matter pages
 \DeclareRobustCommand*{\coverimage}[1]{\gdef\@coverimage{#1}}
