@@ -123,6 +123,26 @@
 	\setlength{\parindent}{0em}
 }
 
+\fancypagestyle{largegraphic}{
+	\newgeometry{
+		inner=0.5in,
+		textwidth=6.5in,
+		top=1.1in,
+		bottom=1.1in,
+		headheight=15pt,
+		heightrounded
+	}
+	\fancyhead{}
+	\fancyfoot{}
+	\fancyhead[RO]{\nouppercase\rightmark}
+	\fancyhead[LE]{\nouppercase\leftmark}
+	\fancyfoot[LE, RO]{Volume \@volumenumber\space - Page \thepage}
+	\fancyfootoffset[LE, RO]{1.0in}
+	\renewcommand{\headrulewidth}{1pt}
+	\raggedright
+	\setlength{\parindent}{3em}
+}
+
 
 \RequirePackage[none]{hyphenat} % No hypenation
 \RequirePackage{parskip} % Configure paragraph spacing
