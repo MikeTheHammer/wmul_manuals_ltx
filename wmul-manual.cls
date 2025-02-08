@@ -23,7 +23,7 @@
 
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{wmul-manual}[2025/01/11 v0.0.3 Template for WMUL-FM's Manuals]
+\ProvidesClass{wmul-manual}[2025/01/11 v0.0.4 Template for WMUL-FM's Manuals]
 
 \LoadClass[12pt, letterpaper, extrafontsizes, twoside]{memoir}
 
@@ -217,7 +217,7 @@
 \gdef\@frontquoteattrib{\@latex@warning{No frontquoteattrib specified for dedication page. Ignoring.}}
 
 % Format the chapter and section titles
-\setsecnumdepth{subsection}
+\setsecnumdepth{subsubsection}
 \titleformat{\chapter}[block]{\centering\fontsize{26}{31.2}\bfseries}{\thechapter.}{0.3em}{}
 \titlespacing{\chapter}{0pt}{-3em}{6pt plus .2pt}
 \renewcommand{\thesection}{\thechapter.\Alph{section}}
@@ -225,7 +225,11 @@
 \titlespacing{\section}{0pt}{2pt plus 1pt minus .2pt}{2pt plus .2pt}
 \titleformat{\subsection}[block]{\raggedright\Large\bfseries}{\thesubsection.}{0.3em}{}
 \titlespacing{\subsection}{0pt}{2pt plus 1pt minus .2pt}{6pt plus .2pt}
-
+\titleformat{\subsubsection}[block]{\raggedright\large\mdseries}{\thesubsubsection.}{0.3em}{}[\vspace{-1em}\rule{\titlewidth}{1pt}]
+\titlespacing{\subsubsection}{0pt}{2pt plus 1pt minus .2pt}{6pt plus .2pt}
+\renewcommand{\thesubsubsection}{\thesubsection.\alph{subsubsection}}
+\titleformat{\paragraph}[block]{\raggedright\large\bfseries}{\theparagraph}{0.3em}{}
+\titlespacing{\paragraph}{0pt}{2pt plus 1pt minus .2pt}{2pt plus .2pt}
 
 % Always start a new section at the top of a new page, unless explicitly told 
 % not to with the \nbpsection command (no-page-break section).
