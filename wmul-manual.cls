@@ -223,13 +223,15 @@
 \renewcommand{\thesection}{\thechapter.\Alph{section}}
 \titleformat{\section}[block]{\raggedright\fontsize{24}{28.8}\mdseries}{\thesection.}{0.3em}{}[\vspace{-1.25em}\rule{\titlewidth}{1pt}]
 \titlespacing{\section}{0pt}{2pt plus 1pt minus .2pt}{2pt plus .2pt}
-\titleformat{\subsection}[block]{\raggedright\Large\bfseries}{\thesubsection.}{0.3em}{}
+\titleformat{\subsection}[block]{\raggedright\fontsize{18}{21.6}\bfseries}{\thesubsection.}{0.3em}{}
 \titlespacing{\subsection}{0pt}{2pt plus 1pt minus .2pt}{6pt plus .2pt}
-\titleformat{\subsubsection}[block]{\raggedright\large\mdseries}{\thesubsubsection.}{0.3em}{}[\vspace{-1em}\rule{\titlewidth}{1pt}]
+\titleformat{\subsubsection}[block]{\raggedright\fontsize{16}{19.2}\mdseries}{\thesubsubsection.}{0.3em}{}[\vspace{-1em}\rule{\titlewidth}{1pt}]
 \titlespacing{\subsubsection}{0pt}{2pt plus 1pt minus .2pt}{0pt plus .2pt}
 \renewcommand{\thesubsubsection}{\thesubsection.\alph{subsubsection}}
-\titleformat{\paragraph}[block]{\raggedright\large\bfseries}{\theparagraph}{0.3em}{}
+\titleformat{\paragraph}[block]{\raggedright\fontsize{14}{16.8}\bfseries}{\theparagraph}{0.3em}{}
 \titlespacing{\paragraph}{0pt}{2pt plus 1pt minus .2pt}{2pt plus .2pt}
+\titleformat{\subparagraph}[block]{\raggedright\fontsize{14}{16.8}\mdseries}{\thesubparagraph}{0.3em}{}[\vspace{-1em}\rule{\titlewidth}{1pt}]
+\titlespacing{\subparagraph}{0pt}{2pt plus 1pt minus .2pt}{2pt plus .2pt}
 
 % Always start a new section at the top of a new page, unless explicitly told 
 % not to with the \nbpsection command (no-page-break section).
