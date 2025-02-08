@@ -226,7 +226,7 @@
 \titleformat{\subsection}[block]{\raggedright\Large\bfseries}{\thesubsection.}{0.3em}{}
 \titlespacing{\subsection}{0pt}{2pt plus 1pt minus .2pt}{6pt plus .2pt}
 \titleformat{\subsubsection}[block]{\raggedright\large\mdseries}{\thesubsubsection.}{0.3em}{}[\vspace{-1em}\rule{\titlewidth}{1pt}]
-\titlespacing{\subsubsection}{0pt}{2pt plus 1pt minus .2pt}{6pt plus .2pt}
+\titlespacing{\subsubsection}{0pt}{2pt plus 1pt minus .2pt}{0pt plus .2pt}
 \renewcommand{\thesubsubsection}{\thesubsection.\alph{subsubsection}}
 \titleformat{\paragraph}[block]{\raggedright\large\bfseries}{\theparagraph}{0.3em}{}
 \titlespacing{\paragraph}{0pt}{2pt plus 1pt minus .2pt}{2pt plus .2pt}
