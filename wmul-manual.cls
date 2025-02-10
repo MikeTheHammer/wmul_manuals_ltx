@@ -180,29 +180,41 @@
 \DeclareRobustCommand*{\compilationversion}[1]{%
     \gdef\compilationversion{#1}%
     \ifstrequal{#1}{public}{%
-		\license{by-sa}%
+		\booltrue{BYSA}%
+		\boolfalse{BYNCND}%
         \imagecolor{Color/}%
 		\boolfalse{PrintNoDerivatives}
 		\booltrue{PrintColor}
     }{%
         \ifstrequal{#1}{private_pdf}{%
-			\license{by-nc-nd}%
+			\boolfalse{BYSA}%
+			\booltrue{BYNCND}%
             \imagecolor{Color/}%
 			\booltrue{PrintNoDerivatives}
 			\booltrue{PrintColor}
         }{%
-			\license{by-nc-nd}%
+			\ifstrequal{#1}{print}{
+				\boolfalse{BYSA}%
+				\booltrue{BYNCND}%
             \imagecolor{Grayscale/}%
 			\booltrue{PrintNoDerivatives}
 			\boolfalse{PrintColor}
+			}{
+				\boolfalse{BYSA}%
+				\boolfalse{BYNCND}%
+				\imagecolor{Color/}%
+				\boolfalse{PrintNoDerivatives}
+				\booltrue{PrintColor}
+			}
         }%
     }%
 }
 \DeclareRobustCommand*{\imagecolor}[1]{\gdef\imagecolor{#1}}
-\DeclareRobustCommand*{\license}[1]{\gdef\@license{#1}}
 \DeclareRobustCommand*{\imageroot}[1]{\gdef\imageroot{#1}}
 \newbool{PrintNoDerivatives}
 \newbool{PrintColor}
+\newbool{BYNCND}
+\newbool{BYSA}
 \DeclareRobustCommand*{\subtitle}[1]{\gdef\@subtitle{#1}}
 \subtitle{Volume \@volumenumber\space of \@seriestitle}
 
@@ -282,8 +294,8 @@
 \endgroup
 }
 
-\newcommand{\makelicense}[2]{%
-	\ifstrequal{#1}{by-nc-nd}{
+\newcommand{\makelicense}[1]{%
+	\ifbool{BYNCND}{
 		\begingroup
 			\newpage
 			\hspace{0pt}
@@ -297,14 +309,14 @@
 
 					\myurl{creativecommons.org/licenses/by-nc-nd/4.0/}
 
-					#2
+					#1
 				\end{large}
 			\end{center}
 			\vfill
 			\hspace{0pt}
 		\endgroup
 	}{
-		\ifstrequal{#1}{by-sa}{
+		\ifbool{BYSA}{
 			\begingroup
 				\newpage
 				\hspace{0pt}
@@ -318,14 +330,14 @@
 
 						\myurl{creativecommons.org/licenses/by-sa/4.0/}
 
-						#2
+						#1
 					\end{large}
 				\end{center}
 				\vfill
 				\hspace{0pt}
 			\endgroup
 		}{ 
-			#2
+			#1
 		}
 	}
 }
