@@ -34,9 +34,10 @@
 	\newgeometry{
 		inner=0.75in,
 		textwidth=6.00in,
-		top=1.1in,
+		top=1.0in,
 		bottom=1.1in,
 		headheight=15pt,
+		headsep=12pt,
 		heightrounded
 	}
 	\fancyhead{}
@@ -52,9 +53,10 @@
 	\newgeometry{
 		inner=0.75in,
 		textwidth=6.00in,
-		top=1.1in,
+		top=1.0in,
 		bottom=1.1in,
 		headheight=15pt,
+		headsep=12pt,
 		heightrounded
 	}
 	\fancyhead{}
@@ -96,9 +98,8 @@
 	\newgeometry{
 		inner=0.75in,
 		textwidth=6.00in,
-		top=1.1in,
-		bottom=1.1in,
-		headheight=15pt,
+		top=1.0in,
+		bottom=1.0in,
 		heightrounded
 	}
 	\fancyhead{}
@@ -127,9 +128,10 @@
 	\newgeometry{
 		inner=0.5in,
 		textwidth=6.5in,
-		top=1.1in,
+		top=1.0in,
 		bottom=1.1in,
 		headheight=15pt,
+		headsep=12pt,
 		heightrounded
 	}
 	\fancyhead{}
