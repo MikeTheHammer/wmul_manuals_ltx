@@ -44,7 +44,7 @@
 	\fancyfoot{}
 	\fancyhead[RO]{\nouppercase\rightmark}
 	\fancyhead[LE]{\nouppercase\leftmark}
-	\fancyfoot[LE, RO]{Volume \@volumenumber\space - Page \thepage}
+	\fancyfoot[LE, RO]{\@pagenumberlead Page \thepage}
 	\fancyfootoffset[LE, RO]{1.2in}
 	\renewcommand{\headrulewidth}{0pt}
 }
@@ -63,7 +63,7 @@
 	\fancyfoot{}
 	\fancyhead[RO]{\nouppercase\rightmark}
 	\fancyhead[LE]{\nouppercase\leftmark}
-	\fancyfoot[LE, RO]{Volume \@volumenumber\space - Page \thepage}
+	\fancyfoot[LE, RO]{\@pagenumberlead Page \thepage}
 	\fancyfootoffset[LE, RO]{1.2in}
 	\renewcommand{\headrulewidth}{1pt}
 	\raggedright
@@ -104,7 +104,7 @@
 	}
 	\fancyhead{}
 	\fancyfoot{}
-	\fancyfoot[LE, RO]{Volume \@volumenumber\space - Page \thepage}
+	\fancyfoot[LE, RO]{\@pagenumberlead Page \thepage}
 	\fancyfootoffset[LE, RO]{1.2in}
 }
 
@@ -138,7 +138,7 @@
 	\fancyfoot{}
 	\fancyhead[RO]{\nouppercase\rightmark}
 	\fancyhead[LE]{\nouppercase\leftmark}
-	\fancyfoot[LE, RO]{Volume \@volumenumber\space - Page \thepage}
+	\fancyfoot[LE, RO]{\@pagenumberlead Page \thepage}
 	\fancyfootoffset[LE, RO]{1.0in}
 	\renewcommand{\headrulewidth}{1pt}
 	\raggedright
@@ -193,16 +193,16 @@
         \ifstrequal{#1}{private_pdf}{%
 			\boolfalse{BYSA}%
 			\booltrue{BYNCND}%
-            \imagecolor{Color/}%
+			\imagecolor{Color/}%
 			\booltrue{PrintNoDerivatives}
 			\booltrue{PrintColor}
         }{%
 			\ifstrequal{#1}{print}{
 				\boolfalse{BYSA}%
 				\booltrue{BYNCND}%
-            \imagecolor{Grayscale/}%
-			\booltrue{PrintNoDerivatives}
-			\boolfalse{PrintColor}
+				\imagecolor{Grayscale/}%
+				\booltrue{PrintNoDerivatives}
+				\boolfalse{PrintColor}
 			}{
 				\boolfalse{BYSA}%
 				\boolfalse{BYNCND}%
@@ -221,6 +221,9 @@
 \newbool{BYSA}
 \DeclareRobustCommand*{\subtitle}[1]{\gdef\@subtitle{#1}}
 \subtitle{Volume \@volumenumber\space of \@seriestitle}
+
+\DeclareRobustCommand*{\pagenumberlead}[1]{\gdef\@pagenumberlead{#1}}
+\pagenumberlead{Volume \@volumenumber\space -- }
 
 % default values for the front matter pages
 \gdef\@coverimage{\@latex@warning{No cover image specified for cover. Ignoring.}}
