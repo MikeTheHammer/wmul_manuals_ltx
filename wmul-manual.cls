@@ -374,6 +374,34 @@
 	\href{#1}{\ul{#1}}
 }
 
+\newcommand{\lchapter}[1]{%
+	\hypertarget{#1}{}%
+	\chapter{#1}%
+	\label{#1}%
+}
+\newcommand{\lsection}[1]{%
+	\hypertarget{#1}{}%
+	\section{#1}%
+	\label{#1}%
+}
+\newcommand{\lsubsection}[1]{%
+	\hypertarget{#1}{}%
+	\subsection{#1}%
+	\label{#1}%
+}
+\newcommand{\lsubsubsection}[1]{%
+	\hypertarget{#1}{}%
+	\subsubsection{#1}%
+	\label{#1}%
+}
+
+\newcommand{\xref}[1]{%
+	\hyperlink{#1}{\underline{See \nameref*{#1} on page \pageref*{#1}}}
+}
+
+\newcommand{\sxref}[1]{%
+	\hyperlink{#1}{\underline{\nameref*{#1} on page \pageref*{#1}}}
+}
 
 \AtEndPreamble{%
 % set some hyperref options if it's loaded
