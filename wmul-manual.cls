@@ -245,6 +245,7 @@
 
 % Format the chapter and section titles
 \setsecnumdepth{subsubsection}
+\setcounter{tocdepth}{3}
 \titleformat{\chapter}[block]{\centering\fontsize{26}{31.2}\bfseries}{\thechapter.}{0.3em}{}
 \titlespacing{\chapter}{0pt}{-3em}{6pt plus .2pt}
 \renewcommand{\thesection}{\thechapter.\Alph{section}}
