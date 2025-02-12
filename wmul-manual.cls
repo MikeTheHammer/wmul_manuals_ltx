@@ -47,6 +47,9 @@
 	\fancyfoot[LE, RO]{\@pagenumberlead Page \thepage}
 	\fancyfootoffset[LE, RO]{1.2in}
 	\renewcommand{\headrulewidth}{0pt}
+	\hypersetup{
+		linkcolor=BrickRed
+	}
 }
 
 \fancypagestyle{fancy}{
@@ -68,6 +71,9 @@
 	\renewcommand{\headrulewidth}{1pt}
 	\raggedright
 	\setlength{\parindent}{3em}
+	\hypersetup{
+		linkcolor=BrickRed
+	}
 }
 
 \fancypagestyle{cover}{%
@@ -106,6 +112,9 @@
 	\fancyfoot{}
 	\fancyfoot[LE, RO]{\@pagenumberlead Page \thepage}
 	\fancyfootoffset[LE, RO]{1.2in}
+	\hypersetup{
+		linkcolor=black
+	}
 }
 
 \fancypagestyle{fullpageimage}{%
@@ -157,7 +166,6 @@
 \RequirePackage{hyperref} 
 \hypersetup{
 	colorlinks=true,
-	linkcolor=black,
 	filecolor=black,
 	urlcolor=black,
 	pdfpagelayout=TwoPageRight
