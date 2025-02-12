@@ -166,7 +166,7 @@
 \RequirePackage[calcwidth]{titlesec} % For configuring the chapter, section, 
 % etc titles
 \RequirePackage{enumitem} % Format the lists
-\setlist[1]{itemsep=-12pt, leftmargin=4em, itemindent=-1em, parsep=16pt}
+\setlist[1]{itemsep=-12pt, leftmargin=4em, itemindent=-1.5em, parsep=16pt}
 \setlist[2]{itemsep=-12pt, leftmargin=3em, itemindent=-1em, parsep=16pt, topsep=-12pt, label=\alph*.}
 \setlist[3]{itemsep=-12pt, leftmargin=3em, itemindent=-1em, parsep=16pt, topsep=-12pt}
 
