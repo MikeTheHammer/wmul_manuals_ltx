@@ -70,6 +70,7 @@
 	\fancyfootoffset[LE, RO]{1.2in}
 	\renewcommand{\headrulewidth}{1pt}
 	\raggedright
+	\raggedbottom
 	\setlength{\parindent}{3em}
 	\hypersetup{
 		linkcolor=BrickRed
