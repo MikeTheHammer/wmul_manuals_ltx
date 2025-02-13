@@ -406,7 +406,7 @@
 	\hyperlink{#1}{\underline{\nameref*{#1} on page \pageref*{#1}}}
 }
 
-\newcommand{\fullpagepdf}[2][1]{
+\newcommand{\fullpageimage}[2][1]{
 	\thispagestyle{fullpageimage}
     \begin{tikzpicture}[remember picture,overlay]
         \node[xshift=-0.1in,yshift=0in,anchor=north west] at (current page.north west){%
