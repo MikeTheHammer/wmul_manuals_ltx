@@ -246,10 +246,10 @@
 % Format the chapter and section titles
 \setsecnumdepth{subsubsection}
 \setcounter{tocdepth}{3}
-\titleformat{\chapter}[block]{\centering\fontsize{26}{31.2}\bfseries}{\thechapter.}{0.3em}{}
+\titleformat{\chapter}[block]{\centering\fontsize{24}{28.2}\bfseries}{\thechapter.}{0.3em}{}
 \titlespacing{\chapter}{0pt}{-3em}{6pt plus .2pt}
 \renewcommand{\thesection}{\thechapter.\Alph{section}}
-\titleformat{\section}[block]{\raggedright\fontsize{24}{28.8}\mdseries}{\thesection.}{0.3em}{}[\vspace{-1.25em}\rule{\titlewidth}{1pt}]
+\titleformat{\section}[block]{\raggedright\fontsize{22}{26.4}\mdseries}{\thesection.}{0.3em}{}[\vspace{-1.25em}\rule{\titlewidth}{1pt}]
 \titlespacing{\section}{0pt}{2pt plus 1pt minus .2pt}{2pt plus .2pt}
 \titleformat{\subsection}[block]{\raggedright\fontsize{18}{21.6}\bfseries}{\thesubsection.}{0.3em}{}
 \titlespacing{\subsection}{0pt}{2pt plus 1pt minus .2pt}{6pt plus .2pt}
