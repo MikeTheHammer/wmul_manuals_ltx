@@ -178,6 +178,8 @@
 \setlist[2]{itemsep=-12pt, leftmargin=3em, itemindent=-1em, parsep=16pt, topsep=-12pt, label=\alph*.}
 \setlist[3]{itemsep=-12pt, leftmargin=3em, itemindent=-1em, parsep=16pt, topsep=-12pt}
 
+\RequirePackage{tikz}
+
 % Commands for configuring the values of the front matter pages
 \DeclareRobustCommand*{\coverimage}[1]{\gdef\@coverimage{#1}}
 \DeclareRobustCommand*{\organizationlogo}[1]{\gdef\@logocmd{#1}}
@@ -402,6 +404,16 @@
 \newcommand{\sxref}[1]{%
 	\hyperlink{#1}{\underline{\nameref*{#1} on page \pageref*{#1}}}
 }
+
+\newcommand{\fullpagepdf}[2][1]{
+	\thispagestyle{fullpageimage}
+    \begin{tikzpicture}[remember picture,overlay]
+        \node[xshift=-0.1in,yshift=0in,anchor=north west] at (current page.north west){%
+        \colorbox{white}{\includegraphics[page=#1, height=11in, width=8.5in]{#2}}};
+    \end{tikzpicture}
+}
+
+
 
 \AtEndPreamble{%
 % set some hyperref options if it's loaded
