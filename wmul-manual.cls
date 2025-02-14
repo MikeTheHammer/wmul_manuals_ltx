@@ -137,7 +137,7 @@
 \fancypagestyle{largegraphic}{
 	\newgeometry{
 		inner=0.5in,
-		textwidth=6.5in,
+		textwidth=7.25in,
 		top=1.0in,
 		bottom=1.1in,
 		headheight=15pt,
@@ -149,7 +149,7 @@
 	\fancyhead[RO]{\nouppercase\rightmark}
 	\fancyhead[LE]{\nouppercase\leftmark}
 	\fancyfoot[LE, RO]{\@pagenumberlead Page \thepage}
-	\fancyfootoffset[LE, RO]{1.0in}
+	\fancyfootoffset[LE, RO]{0.2in}
 	\renewcommand{\headrulewidth}{1pt}
 	\raggedright
 	\setlength{\parindent}{3em}
