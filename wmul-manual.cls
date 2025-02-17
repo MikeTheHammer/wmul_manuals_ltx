@@ -399,11 +399,15 @@
 }
 
 \newcommand{\xref}[1]{%
-	\hyperlink{#1}{\underline{See \nameref*{#1} on page \pageref*{#1}}}
+	See \hyperlink{#1}{\underline{\ref*{#1} \nameref*{#1}}} on page \pageref*{#1}
 }
 
 \newcommand{\sxref}[1]{%
-	\hyperlink{#1}{\underline{\nameref*{#1} on page \pageref*{#1}}}
+	\hyperlink{#1}{\underline{\ref*{#1} \nameref*{#1}}} on page \pageref*{#1}
+}
+
+\newcommand{\vsxref}[1]{%
+	\hyperlink{#1}{\underline{\ref*{#1} \nameref*{#1}}}
 }
 
 \newcommand{\chapterstart}[3]{
