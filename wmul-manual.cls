@@ -406,6 +406,28 @@
 	\hyperlink{#1}{\underline{\nameref*{#1} on page \pageref*{#1}}}
 }
 
+\newcommand{\chapterstart}[3]{
+    \renewcommand{\imageroot}{#1-#2/}
+    \graphicspath{{../Common/\imagecolor}{../Common/Common}{\imageroot\imagecolor}{\imageroot/Common}}
+    \ifbool{PrintNoDerivatives}{
+        \cleartoevenpage[\thispagestyle{fullpageimage}]
+        \pagestyle{fullpageimage}
+        \hspace{0pt}
+        \vfill
+        \includegraphics{ ND/#1-#2.jpg}
+        \vfill
+    }{
+        \cleartoevenpage[\thispagestyle{fullpageimage}]
+        \pagestyle{fullpageimage}
+        \hspace{0pt}
+        \vfill
+        
+    }
+    \pagestyle{fancy}
+    \lchapter{#3}
+}
+
+
 \newcommand{\fullpageimage}[2][1]{
 	\thispagestyle{fullpageimage}
     \begin{tikzpicture}[remember picture,overlay]
