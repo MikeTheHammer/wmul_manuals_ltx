@@ -23,7 +23,7 @@
 
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{wmul-manual}[2025/01/11 v0.0.4 Template for WMUL-FM's Manuals]
+\ProvidesClass{wmul-manual}[2025/01/11 v0.0.5 Template for WMUL-FM's Manuals]
 
 \LoadClass[12pt, letterpaper, extrafontsizes, twoside]{memoir}
 
